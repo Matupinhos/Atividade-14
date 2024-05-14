@@ -1,24 +1,21 @@
 function pergunta1() {
-    var num1 = 5;
-    var num2 = 3;
+    var num1 = document.getElementById('var1').value;
+    var num2 = document.getElementById('var2').value;
     var pA = document.getElementById('pergunta1_a');
     var pB = document.getElementById('pergunta1_b');
     var pC = document.getElementById('pergunta1_c');
     var pD = document.getElementById('pergunta1_d');
-    var numero_aleatorio1 = Math.floor(Math.random() * 50);
-    var numero_aleatorio2 = Math.floor(Math.random() * 50);
-    pA.innerHTML = num1 - num2;
-    pB.innerHTML = (num1 * 2) + (num2 * 3);
-    pC.innerHTML = num1 * num2;
-    pD.innerHTML = "Resultado no console!"
-    console.log("---------------------------------------------------------")
-    console.log("PERGUNTA 1:")
-    console.log("Numero aleátorio 1:", numero_aleatorio1);
-    console.log("Numero aleátorio 2:", numero_aleatorio2);
-    if (numero_aleatorio1 > numero_aleatorio2) {
-        console.log(numero_aleatorio1, '>', numero_aleatorio2);
+    if (num1 < num2) {
+        pA.innerHTML = num1 - num2;
     } else {
-        console.log(numero_aleatorio2, '>', numero_aleatorio1);
+        pA.innerHTML = num2 -    num1
+    }
+    pB.innerHTML = (num1 * 2) + (num2 * 3);
+    pC.innerHTML = num1 * num2; 
+    if (num1 > num2) {
+        pD.innerHTML = 'Em ordem decrescente : ' + num2 + ' < '+ num1;
+    } else {
+        pD.innerHTML = 'Em ordem decrescente : ' + num1 + ' < '+ num2;
     };
 };
 function pergunta2 (){
